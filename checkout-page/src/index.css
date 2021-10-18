@@ -1,0 +1,13 @@
+/* ./src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .custom-input {
+    @apply block outline-none text-base p-3 bg-gray-200 rounded-sm;
+  }
+  .custom-label {
+    @apply my-1 block;
+  }
+}
