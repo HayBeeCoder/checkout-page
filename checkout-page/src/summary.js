@@ -15,10 +15,10 @@ function summary(props) {
                     <Summarycard />
                 </div>
             </div>
-            <div className="row-start-4 row-span-1 flex items-center ">
+            <div className="row-start-4 row-span-1 flex items-center border-t-1 border-b-1 ">
                 <Coupon />
             </div>
-            <div className="bg-gray-500 row-start-5 row-span-2">
+            <div className="row-start-5 row-span-2">
                 <Costs />
             </div>
 

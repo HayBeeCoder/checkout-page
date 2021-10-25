@@ -7,7 +7,8 @@ import Button from "./Button";
 
 function App() {
   return (
-    <div className="font-display h-screen ">
+    <div className="font-display h-screen  mx-auto">
+      {/* <div className="font-display h-screen max-w-7xl mx-auto"> */}
       <header className="App-header p-7 py-5 border-b  flex justify-between class items-center">
         <h1 className="font-display font-bold  text-4xl">LOGO</h1>
         <Nav />
@@ -24,7 +25,7 @@ function App() {
         <Summary />
 
       </section>
-    </div>
+    </div >
   );
 }
 
