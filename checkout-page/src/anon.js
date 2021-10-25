@@ -12,18 +12,18 @@ function payment(props) {
             <h2 className="text-2xl font-bold my-3">Payment Details</h2>
             <form action="">
                 <ul className="list-none grid grid-cols-12 gap-7">
-                    <Inputelement col="col-start-1 col-span-12" label="Card Holder" />
-                    <Inputelement col="col-start-1 col-span-12" label="Card Number" />
-                    <Inputelement col="col-start-1 col-span-4" label="Expiration">
+                    <Inputelement className="col-start-1 col-span-12" label="Cardholder Name" />
+                    <Inputelement className="col-start-1 col-span-12" label="Card Number" />
+                    <Inputelement className="col-start-1 col-span-4" label="Expiration">
                         <label htmlFor="expiration" className="custom-label">Expiration</label>
                         <div className="inline-flex items-center">
-                            <input className="w-24 custom-input" type="text" name="expiration" id="expiration-day" />
+                            <Inputelement className="w-24" />
                             <span className="w-14 text-center">/</span>
-                            <input className="w-24 custom-input" type="text" name="expiration" id="expiration-month" />
+                            <input className="custom-input w-24" type="text" name="expiration" id="expiration-month" />
 
                         </div>
                     </Inputelement>
-                    <Inputelement col="col-start-7 col-span-6" label="CVV" />
+                    <Inputelement className="col-start-7 col-span-6" label="CVV" />
                     {/* <li className="col-start-1 col-span-12">
 
                         <label htmlFor="cardnumber">Card Number</label>

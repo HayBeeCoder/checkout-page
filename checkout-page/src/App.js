@@ -2,6 +2,8 @@
 import Payment from "./anon";
 import Nav from "./nav";
 import Progress from "./progress";
+import Summary from "./summary";
+import Button from "./Button";
 
 function App() {
   return (
@@ -11,16 +13,16 @@ function App() {
         <Nav />
       </header>
       <section className="grid grid-cols-12 min-h-full ">
-        <main className=" col-start-1 col-span-9 h-full py-6">
+        <main className=" col-start-1 col-span-8 h-full py-6 ">
           <div className="w-5/6 mx-auto max-w-xl">
             <Progress />
             <Payment />
             {/* <Payment /> */}
+            <Button className="bg-blue-800 text-white my-4 py-4 px-16" buttonFor="Review Order" />
           </div>
         </main>
-        <aside className="border-l col-start-10 col-span-3 h-full">
-          Cart Summary
-        </aside>
+        <Summary />
+
       </section>
     </div>
   );

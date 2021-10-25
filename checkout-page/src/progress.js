@@ -6,7 +6,7 @@ function progress(props) {
         <div>
             <ul className="flex justify-between">
                 {/* <div className=""></div> */}
-                <Checkpoint name="Accont" />
+                <Checkpoint name="Account" />
                 <Checkpoint name="Shipping" />
                 <Checkpoint name="Payment" />
                 <Checkpoint name="Review" />

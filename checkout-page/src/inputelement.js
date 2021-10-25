@@ -1,15 +1,16 @@
 import React from 'react';
 
-function inputelement({ col, label, children }) {
-    const classes = `${col}`
+function inputelement({ className = "", label, children }) {
+    // const className = `${className}`
     return (
-        <li className={classes}>
+        <li className={"list-none " + className}>
             {children ||
                 <div>
-                    <label htmlFor={label.toLowerCase()} className="custom-label">
+                    {label && <label htmlFor={label ? label.toLowerCase() : ""} className="custom-label">
                         {label}
-                    </label>
-                    <input className=" w-full custom-input" type="text" name={label.toLowerCase()} id={label.toLowerCase()} />
+                    </label>}
+                    
+                    <input className=" w-full  custom-input" type="text" name={label ? label.toLowerCase() : ""} id={label ? label.toLowerCase() : ""} />
                 </div>
             }
         </li>

@@ -11,3 +11,21 @@
     @apply my-1 block;
   }
 }
+
+@layer utilities {
+  .scroll-w-2::-webkit-scrollbar {
+    width: 7px;
+    color: #6969dd;
+  }
+  .scroll-w-2::-webkit-scrollbar-track {
+    background-color: white;
+  }
+
+  .scroll-w-2::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 10px;
+  }
+  .border-1 {
+    border-width: 1px;
+  }
+}
