@@ -5,10 +5,10 @@
 
 @layer components {
   .custom-input {
-    @apply block outline-none text-base p-3 bg-gray-200 rounded-sm;
+    @apply block outline-none text-sm p-3 bg-gray-200 rounded-sm;
   }
   .custom-label {
-    @apply my-1 block;
+    @apply my-0.5 block text-sm;
   }
 }
 
@@ -34,5 +34,12 @@
   }
   .border-b-1 {
     border-bottom-width: 1px;
+  }
+
+  .textarea::placeholder {
+    font-size: 0.9em;
+  }
+  .text-cart {
+    font-size: 0.7em;
   }
 }

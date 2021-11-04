@@ -2,9 +2,9 @@ import Costs from "./Costs";
 import Coupon from "./Coupon";
 import React from 'react';
 import Summarycard from './summarycard';
-function summary(props) {
+function summary({ className }) {
     return (
-        <aside className="grid grid-rows-6  font-medium border-l col-start-9 col-span-4 h-screen  p-2">
+        <aside className={"grid grid-rows-6  font-medium border-l  h-screen  p-2 " + className}>
             <div className=" row-start-1 row-span-3 overflow-y-scroll scroll-w-2" >
                 <h2 className="leading-loose font-display text-xl mb-3 uppercase font-semibold" >Order Summary</h2>
                 <div className="flex flex-col gap-3">
