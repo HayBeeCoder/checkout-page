@@ -24,11 +24,16 @@ module.exports = {
     },
     fontFamily: {
       'display': ['Montserrat'],
+      'logo': ['Belleza']
     },
     extend: {
       colors: {
         'custom-purple': '#d600b7',
         'custom-black': '#161616',
+      },
+      backgroundImage: {
+        'hero-image-desktop': "url('./assets/images/female-male-landscape.jpg')",
+        'hero-image-mobile': "url('./assets/images/female-male-potrait.jpg')",
       }
     },
   },

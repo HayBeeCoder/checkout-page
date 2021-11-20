@@ -7,7 +7,7 @@ const Cost = ({ name, value }) => {
     name = name.slice(0, 1).toUpperCase() + name.slice(1);
     console.log(name)
     return (
-        <li className="w-full flex justify-between my-1">
+        <li className="w-full flex gap-10 my-1">
             <p className={className}>{name}</p>
             <p className={className}>{'$' + value}</p>
         </li>

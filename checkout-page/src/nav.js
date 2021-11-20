@@ -2,7 +2,9 @@ import React from 'react';
 import Navlink from './navlink';
 import { FaShoppingCart, ShoppingCart } from 'react-icons/fa';
 import { Link } from "react-router-dom";
-function Nav(props) {
+function Nav() {
+
+   
     return (
         <ul className="list-none flex flex-row gap-5 items-center">
             <Navlink href="#" link="Women's" />

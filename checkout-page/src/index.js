@@ -7,15 +7,17 @@ import Payment from './payment';
 import Home from './Home';
 import Cart from './cart';
 import Deliver from './deliver';
-import Review from './review'
-import Address from './Address'
-
+import Review from './review';
+import Address from './Address';
+// import LandingPa
+import LandingPage from './LandingPage';
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
 
       <div>
-        <Route exact path="/" component={Home} />
+        <Route exact path="/" component={LandingPage} />
+        {/* <Route exact path="/" component={Home} /> */}
         <Route path="/cart" component={Cart} />
         <Route path="/checkout/address" component={Address} />
         <Route path="/checkout/delivery" component={Deliver} />
