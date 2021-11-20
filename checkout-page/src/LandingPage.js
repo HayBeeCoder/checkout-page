@@ -6,6 +6,9 @@ import menCollection from './assets/images/landscape-male.jpg'
 import womenCollection from './assets/images/landscape-female.jpeg'
 import childrenCollection from './assets/images/landscape-male.jpg'
 import Button from './Button.js'
+
+import { HashLink, NavHashLink } from 'react-router-hash-link';
+
 const LandingPage = () => {
     return (
         <div className="relative w-screen min-h-screen overflow-x-hidden">
@@ -15,11 +18,16 @@ const LandingPage = () => {
                 <div className="absolute h-full w-full z-50 text-white  flex flex-col gap-2 items-center justify-center">
                     <h1 className="text-8xl font-extrabold">YOU DESERVE BETTER</h1>
                     <p className="text-xl italic">Let's go get what you deserve , dear</p>
-                    <Button className="uppercase  my-7 bg-purple-800 text-white  py-4 px-16 text-xl tracking-widest" buttonFor="Start Shopping" />
+
+                    <HashLink smooth to={'/#section-collections'}>
+                        <Button className="uppercase  my-7 bg-purple-800 text-white  py-4 px-16 text-xl tracking-widest" buttonFor="Start Shopping" />
+
+                    </HashLink>
+
                 </div>
                 <img src={desktopHero} alt="" className=" object-cover  w-full h-full" />
             </div>
-            <div className="py-28">
+            <div smooth id="section-collections" className="py-28">
                 <h2 className="text-center tracking-wide leading-loose my-6 font-display font-bold text-4xl ">Our  <span className="text-purple-700">Collections</span> </h2>
                 <ul className="grid grid-cols-12  gap-3 w-full overflow-hidden">
                     <li className="col-start-4 col-span-6">
