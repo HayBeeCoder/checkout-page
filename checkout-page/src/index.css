@@ -42,4 +42,14 @@
   .text-cart {
     font-size: 0.7em;
   }
+
+  .auto-rows-3 {
+    grid-auto-rows: 300px;
+  }
+  .stroke {
+    /* color: black; */
+    /* font-size: 34px; */
+    -webkit-text-stroke: 0.1px black;
+    -webkit-text-fill-color: white;
+  }
 }

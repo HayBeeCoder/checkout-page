@@ -4,7 +4,7 @@ import './index.css';
 // import App from './App';
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import Payment from './payment';
-import Home from './Home';
+import Male from './Male';
 import Cart from './cart';
 import Deliver from './deliver';
 import Review from './review';
@@ -19,6 +19,7 @@ ReactDOM.render(
         <Route exact path="/" component={LandingPage} />
         {/* <Route exact path="/" component={Home} /> */}
         <Route path="/cart" component={Cart} />
+        <Route path="/store/men-collections" component={Male} />
         <Route path="/checkout/address" component={Address} />
         <Route path="/checkout/delivery" component={Deliver} />
         <Route path="/checkout/payment" component={Payment} />

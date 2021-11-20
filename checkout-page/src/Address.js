@@ -13,7 +13,7 @@ const Address = () => {
             <CheckoutPageTemplate progressCount={1}>
                 <div className="my-7">
                     <h2 className="text-2xl font-bold my-1">Address Details</h2>
-                    <p className="text-xs mb-4"> * means Required </p>
+                    {/* <p className="text-xs mb-4"> * means Required </p> */}
                     <form action="">
                         <ul className="list-none grid grid-cols-12 gap-4">
                             <Inputelement className="col-start-1 col-span-6" label="First Name" important={true} />

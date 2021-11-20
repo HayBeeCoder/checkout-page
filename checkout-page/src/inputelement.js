@@ -7,7 +7,7 @@ function inputelement({ className = "", label, children, type = "text", importan
             {children ||
                 <div>
                     {label && <label htmlFor={label ? label.toLowerCase() : ""} className="custom-label">
-                        {label + (important ? " *" : "")}
+                        {label + (important ? "" : " (optional)")}
                     </label>}
 
                     <input className=" w-full  custom-input" type={type} name={label ? label.toLowerCase() : ""} id={label ? label.toLowerCase() : ""} >
