@@ -10,6 +10,12 @@
   .custom-label {
     @apply my-0.5 block text-sm;
   }
+  .heading-2 {
+    @apply text-center tracking-wide leading-loose my-6 font-display font-bold text-4xl;
+  }
+  .heading-3 {
+    @apply text-lg font-bold my-3;
+  }
 }
 
 @layer utilities {
@@ -51,5 +57,20 @@
     /* font-size: 34px; */
     -webkit-text-stroke: 0.1px black;
     -webkit-text-fill-color: white;
+  }
+  .grid-cols-rep4 {
+    grid-template-columns: repeat(4, 25%);
+    
+  }
+  .grid-cols-rep3  {
+    grid-template-columns: repeat(3, 33%);
+    
+  }
+  .grid-cols-rep2 {
+    grid-template-columns: repeat(2, 50%);
+    
+  }
+  .gap-two{
+    gap: 2px
   }
 }
