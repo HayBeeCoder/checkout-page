@@ -9,7 +9,7 @@ function Header({ landingpage }) {
         <header className={className}>
             {/* <div className="bg-red-700 absolute top-1/2 transform -translate-y-1/2 w-full h-1"></div> */}
             <Link to="/" className="self-">
-                <h1 className="font-logo font-bold  text-7xl leading-normal ">sh<span className="inline-block text-purple-700 ">o</span>pr</h1>
+                <h1 className="font-logo font-bold  text-3xl leading-normal ">sh<span className="inline-block text-purple-700 ">o</span>pr</h1>
             </Link>
             {!landingpage && <Nav />}
 

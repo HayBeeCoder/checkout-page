@@ -11,6 +11,7 @@ import Review from './review';
 import Address from './Address';
 
  import Product from './Product';
+ import NoContent from './NoContent'
 // import LandingPa
 import LandingPage from './LandingPage';
 ReactDOM.render(
@@ -23,7 +24,7 @@ ReactDOM.render(
         <Route path="/cart" component={Cart} />
         <Route path="/collections/:category" component={Products} />
          <Route path="/product/:productId" component={Product} /> 
-        {/* <Route path="/collection/men-collections" component={Male} /> */}
+         <Route path="/collections" component={NoContent} /> 
         {/* <Route path="/store/men-collections" component={Male} /> */}
         <Route path="/checkout/address" component={Address} />
         <Route path="/checkout/delivery" component={Deliver} />
