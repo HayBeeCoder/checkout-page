@@ -24,18 +24,20 @@ function Products(props) {
                  */}
                     <div className="uppercase text-3xl font-normal py-10 ">{category + '\'s clothing and apparel'}</div>
 
-                    <div className=" w-full  grid lg:grid-cols-3 md:grid-cols-2  grid-cols-4  gap-two">
+                    <div className=" w-full  grid lg:grid-cols-3 md:grid-cols-2  grid-cols-4  gap-two"> 
+                    {/* <div className="w-full"> */}
 
 
                         {filtered_products
                             .map((product) =>
-                                <div key={product.id} className="rounded overflow-hidden drop-shadow-lg mb-5 sm:w-full " collection_in={filtered_products}>
-                                    <Link to={'/product/' + product.id} >
+                                <div key={product.id} className="rounded overflow-hidden drop-shadow-sm mb-5 sm:w-full " collection_in={filtered_products}>
+                                    <Link to={'/collections/' + product.category + '/product/' + product.id} >
                                         {/* <Link to={'/collections/' + product.category + '/' + product.id} > */}
 
-                                        <div className="relative">
-                                            <img src={product.image[0]} alt={product.name} />
-
+                                        <div className="relative w-full">
+                                             <div className="relative pb-full bg-purple-400 overflow-hidden">
+                                                    <img src={product.image[0]} alt={product.name}  className="absolute top-0 left-0 "/> 
+                                            </div>
                                             <div className="absolute top-0 right-0 p-3">
                                                 <AiOutlineHeart className="text-2xl" />
                                                 {/* <AiFillHeart className="text-2xl" /> */}

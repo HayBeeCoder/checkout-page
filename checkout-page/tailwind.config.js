@@ -1,5 +1,4 @@
 module.exports = {
-
   purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
   darkMode: false, // or 'media' or 'class'
   theme: {
@@ -24,6 +23,9 @@ module.exports = {
       'logo': ['Belleza']
     },
     extend: {
+      spacing: {
+        'full': '100%',
+      },
       colors: {
         'custom-purple': '#d600b7',
         'custom-black': '#161616',
