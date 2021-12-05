@@ -36,7 +36,12 @@ export const products = [
         name: "Tiro 21 Track Pant",
         desc: "Feel good. Look good. Rooted in soccer heritage, the Tiro 21 Track Pants perform on and off the pitch. Made to move, they keep you confident with moisture-absorbing AEROREADY. They also contain recycled materials, another small step in adidas' efforts to help end plastic waste.",
         price: 45,
-        image: ['https://res.cloudinary.com/abasscodes/image/upload/v1637916389/tiro-21-track-pants_s7fh2n.jpg',],
+        image: [
+            'https://res.cloudinary.com/abasscodes/image/upload/v1637916389/tiro-21-track-pants_s7fh2n.jpg',
+            'https://res.cloudinary.com/abasscodes/image/upload/v1637916389/tiro-21-track-pants_s7fh2n.jpg',
+            'https://res.cloudinary.com/abasscodes/image/upload/v1637916389/tiro-21-track-pants_s7fh2n.jpg',
+            'https://res.cloudinary.com/abasscodes/image/upload/v1637916389/tiro-21-track-pants_s7fh2n.jpg',
+            ],
         category: ["men"]
     },
 
@@ -45,7 +50,12 @@ export const products = [
         name: "Tiro 21 Track Pant",
         desc: "Feel good. Look good. Rooted in soccer heritage, the Tiro 21 Track Pants perform on and off the pitch. Made to move, they keep you confident with moisture-absorbing AEROREADY. They also contain recycled materials, another small step in adidas' efforts to help end plastic waste.",
         price: 45,
-        image: ['https://res.cloudinary.com/abasscodes/image/upload/v1637916389/tiro-21-track-pants_s7fh2n.jpg',],
+        image: [
+            'https://res.cloudinary.com/abasscodes/image/upload/v1637916389/tiro-21-track-pants_s7fh2n.jpg',
+            'https://res.cloudinary.com/abasscodes/image/upload/v1637916389/tiro-21-track-pants_s7fh2n.jpg',
+            'https://res.cloudinary.com/abasscodes/image/upload/v1637916389/tiro-21-track-pants_s7fh2n.jpg',
+            'https://res.cloudinary.com/abasscodes/image/upload/v1637916389/tiro-21-track-pants_s7fh2n.jpg',
+        ],
         category: ["men"]
     },
 
@@ -54,7 +64,12 @@ export const products = [
         name: "Tiro 21 Track Pant",
         desc: "Feel good. Look good. Rooted in soccer heritage, the Tiro 21 Track Pants perform on and off the pitch. Made to move, they keep you confident with moisture-absorbing AEROREADY. They also contain recycled materials, another small step in adidas' efforts to help end plastic waste.",
         price: 45,
-        image: ['https://res.cloudinary.com/abasscodes/image/upload/v1637916389/tiro-21-track-pants_s7fh2n.jpg',],
+        image: [
+            'https://res.cloudinary.com/abasscodes/image/upload/v1637916389/tiro-21-track-pants_s7fh2n.jpg',
+            'https://res.cloudinary.com/abasscodes/image/upload/v1637916389/tiro-21-track-pants_s7fh2n.jpg',
+            'https://res.cloudinary.com/abasscodes/image/upload/v1637916389/tiro-21-track-pants_s7fh2n.jpg',
+            'https://res.cloudinary.com/abasscodes/image/upload/v1637916389/tiro-21-track-pants_s7fh2n.jpg',
+        ],
         category: ["women"]
     },
 
@@ -63,7 +78,12 @@ export const products = [
         name: "Tiro 21 Track Pant",
         desc: "Feel good. Look good. Rooted in soccer heritage, the Tiro 21 Track Pants perform on and off the pitch. Made to move, they keep you confident with moisture-absorbing AEROREADY. They also contain recycled materials, another small step in adidas' efforts to help end plastic waste.",
         price: 45,
-        image: ['https://res.cloudinary.com/abasscodes/image/upload/v1637916389/tiro-21-track-pants_s7fh2n.jpg',],
+        image: [
+            'https://res.cloudinary.com/abasscodes/image/upload/v1637916389/tiro-21-track-pants_s7fh2n.jpg',
+            'https://res.cloudinary.com/abasscodes/image/upload/v1637916389/tiro-21-track-pants_s7fh2n.jpg',
+            'https://res.cloudinary.com/abasscodes/image/upload/v1637916389/tiro-21-track-pants_s7fh2n.jpg',
+            'https://res.cloudinary.com/abasscodes/image/upload/v1637916389/tiro-21-track-pants_s7fh2n.jpg',
+        ],
         category: ["women"]
     },
 
@@ -72,7 +92,12 @@ export const products = [
         name: "Tiro 21 Track Pant",
         desc: "Feel good. Look good. Rooted in soccer heritage, the Tiro 21 Track Pants perform on and off the pitch. Made to move, they keep you confident with moisture-absorbing AEROREADY. They also contain recycled materials, another small step in adidas' efforts to help end plastic waste.",
         price: 45,
-        image: ['https://res.cloudinary.com/abasscodes/image/upload/v1637916389/tiro-21-track-pants_s7fh2n.jpg',],
+        image: [
+            'https://res.cloudinary.com/abasscodes/image/upload/v1637916389/tiro-21-track-pants_s7fh2n.jpg',
+            'https://res.cloudinary.com/abasscodes/image/upload/v1637916389/tiro-21-track-pants_s7fh2n.jpg',
+            'https://res.cloudinary.com/abasscodes/image/upload/v1637916389/tiro-21-track-pants_s7fh2n.jpg',
+            'https://res.cloudinary.com/abasscodes/image/upload/v1637916389/tiro-21-track-pants_s7fh2n.jpg',
+        ],
         category: ["men"]
     },
 
@@ -81,7 +106,12 @@ export const products = [
         name: "Tiro 21 Track Pant",
         desc: "Feel good. Look good. Rooted in soccer heritage, the Tiro 21 Track Pants perform on and off the pitch. Made to move, they keep you confident with moisture-absorbing AEROREADY. They also contain recycled materials, another small step in adidas' efforts to help end plastic waste.",
         price: 45,
-        image: ['https://res.cloudinary.com/abasscodes/image/upload/v1637916389/tiro-21-track-pants_s7fh2n.jpg',],
+        image: [
+            'https://res.cloudinary.com/abasscodes/image/upload/v1637916389/tiro-21-track-pants_s7fh2n.jpg',
+            'https://res.cloudinary.com/abasscodes/image/upload/v1637916389/tiro-21-track-pants_s7fh2n.jpg',
+            'https://res.cloudinary.com/abasscodes/image/upload/v1637916389/tiro-21-track-pants_s7fh2n.jpg',
+            'https://res.cloudinary.com/abasscodes/image/upload/v1637916389/tiro-21-track-pants_s7fh2n.jpg',
+        ],
         category: ["men"]
     },
 
@@ -90,7 +120,12 @@ export const products = [
         name: "Tiro 21 Track Pant",
         desc: "Feel good. Look good. Rooted in soccer heritage, the Tiro 21 Track Pants perform on and off the pitch. Made to move, they keep you confident with moisture-absorbing AEROREADY. They also contain recycled materials, another small step in adidas' efforts to help end plastic waste.",
         price: 45,
-        image: ['https://res.cloudinary.com/abasscodes/image/upload/v1637916389/tiro-21-track-pants_s7fh2n.jpg',],
+        image: [
+            'https://res.cloudinary.com/abasscodes/image/upload/v1637916389/tiro-21-track-pants_s7fh2n.jpg',
+            'https://res.cloudinary.com/abasscodes/image/upload/v1637916389/tiro-21-track-pants_s7fh2n.jpg',
+            'https://res.cloudinary.com/abasscodes/image/upload/v1637916389/tiro-21-track-pants_s7fh2n.jpg',
+            'https://res.cloudinary.com/abasscodes/image/upload/v1637916389/tiro-21-track-pants_s7fh2n.jpg',
+        ],
         category: ["men"]
     },
 
@@ -99,7 +134,12 @@ export const products = [
         name: "Tiro 21 Track Pant",
         desc: "Feel good. Look good. Rooted in soccer heritage, the Tiro 21 Track Pants perform on and off the pitch. Made to move, they keep you confident with moisture-absorbing AEROREADY. They also contain recycled materials, another small step in adidas' efforts to help end plastic waste.",
         price: 45,
-        image: ['https://res.cloudinary.com/abasscodes/image/upload/v1637916389/tiro-21-track-pants_s7fh2n.jpg',],
+        image: [
+            'https://res.cloudinary.com/abasscodes/image/upload/v1637916389/tiro-21-track-pants_s7fh2n.jpg',
+            'https://res.cloudinary.com/abasscodes/image/upload/v1637916389/tiro-21-track-pants_s7fh2n.jpg',
+            'https://res.cloudinary.com/abasscodes/image/upload/v1637916389/tiro-21-track-pants_s7fh2n.jpg',
+            'https://res.cloudinary.com/abasscodes/image/upload/v1637916389/tiro-21-track-pants_s7fh2n.jpg',
+        ],
         category: ["men"]
     },
 
