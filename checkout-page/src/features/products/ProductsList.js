@@ -1,14 +1,17 @@
 import React, { Component } from 'react';
-import Header from './Header';
+// import Header from './Header';
 import { useLocation } from 'react-router';
 // import Products from './Products';
+import {useSelector} from "react-redux"
 
 //  import React from 'react';
-import { products } from './models/data'
+// import { products } from './models/data'
+// import { useSelector } from "react-red"
 // import { FaHeart } from "react-icons/fa"
 import { AiOutlineHeart, AiFillHeart } from "react-icons/ai"
 import { Link } from "react-router-dom"
 function Products(props) {
+    const products = useSelector(state => state.products)
     const location = useLocation();
     const category = location.pathname.split("/")[2]
     // console.log(category)
@@ -16,7 +19,7 @@ function Products(props) {
     // console.log(products)
     return (
         <div>
-            <Header landingpage={false} />
+            {/* <Header landingpage={false} /> */}
             <div className="py-7 ">
                 <div className="sm:px-2 px-5">
                     {/* <h1 className="text-3xl font-bold leading-3 m-3">THIS IS THE HOMEPAGE.</h1>
@@ -24,19 +27,20 @@ function Products(props) {
                  */}
                     <div className="uppercase text-3xl font-normal py-10 ">{category + '\'s clothing and apparel'}</div>
 
-                    <div className=" w-full  grid lg:grid-cols-3 md:grid-cols-2  grid-cols-4  gap-two"> 
-                    {/* <div className="w-full"> */}
+                    <div className=" w-full  grid lg:grid-cols-3 md:grid-cols-2  grid-cols-4  gap-two">
+                        {/* <div className="w-full"> */}
 
 
                         {filtered_products
                             .map((product) =>
                                 <div key={product.id} className="rounded overflow-hidden drop-shadow-sm mb-5 sm:w-full " collection_in={filtered_products}>
-                                    <Link to={'/collections/' + product.category + '/product/' + product.id} >
+                                    {/* <Link to={'/collections/' + product.category + '/product/' + product.id} > */}
+                                    <Link to={`/collections/${product.category}/product/${product.id}`} >
                                         {/* <Link to={'/collections/' + product.category + '/' + product.id} > */}
 
                                         <div className="relative w-full">
-                                             <div className="relative pb-full bg-purple-400 overflow-hidden">
-                                                    <img src={product.image[0]} alt={product.name}  className="absolute top-0 left-0 "/> 
+                                            <div className="relative pb-full bg-purple-400 overflow-hidden">
+                                                <img src={product.image[0]} alt={product.name} className="absolute top-0 left-0 " />
                                             </div>
                                             <div className="absolute top-0 right-0 p-3">
                                                 <AiOutlineHeart className="text-2xl" />

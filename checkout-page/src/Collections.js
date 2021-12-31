@@ -22,7 +22,7 @@ function Collections(props) {
         },
     ]
     return (
-
+//smooth for smooth scrolling
         <div smooth id="section-collections" className="py-28">
             <h2 className="heading-2">Our  <span className="text-purple-700">Collections</span> </h2>
             <ul className="grid grid-cols-12  gap-3 w-full overflow-hidden">
