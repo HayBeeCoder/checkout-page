@@ -1,12 +1,12 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 
 function Navlink({ link, href }) {
     return (
         // <li >
-        <Link to={`/collections/${href}`}>
+        <NavLink to={`/${href}`} className="hover:text-purple-500 " activeClassName='text-purple-700'>
             <li className="inline-block p-2 px-2 ">{link}</li>
-        </Link>
+        </NavLink>
         // </li>
     );
 }

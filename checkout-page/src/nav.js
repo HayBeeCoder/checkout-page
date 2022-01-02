@@ -9,12 +9,12 @@ function Nav() {
     return (
         <ul className="list-none flex flex-row gap-5 items-center">
 
-            <Navlink href="women" link="Women's" />
-            <Navlink href="men" link="Men's" />
-            <Navlink href="children" link="Children" />
-            <Navlink href="#" link="About" />
-            <Navlink href="#" link="Beauty" />
-            <Navlink href="#" link="Sale" />
+            <Navlink href="collections/women" link="Women's" />
+            <Navlink href="collections/men" link="Men's" />
+            <Navlink href="collections/children" link="Children" />
+            <Navlink href="about" link="About" />
+            <Navlink href="beauty" link="Beauty" />
+            <Navlink href="sale" link="Sale" />
             <Link to="/profile">
                 {/* <FdCard></FaIdCard> */}
                 <CgProfile className="text-2xl" />

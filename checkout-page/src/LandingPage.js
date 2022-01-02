@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import React from 'react';
-import Header from './Header';
+import Header from './components/header/Header';
 import desktopHero from './assets/images/female-male-landscape.jpg';
 import menCollection from './assets/images/landscape-male.jpg'
 import womenCollection from './assets/images/landscape-female.jpeg'

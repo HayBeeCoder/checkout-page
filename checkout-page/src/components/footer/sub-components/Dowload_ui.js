@@ -2,7 +2,7 @@ import React from 'react';
 
 function DowloadUi({ platform, children }) {
     return (
-        <button className="bg-purple-800 flex gap-2 p-3 py-2 items-center rounded-lg">
+        <button className="bg-purple-800 flex gap-2 p-3 py-2 items-center transit rounded-lg hover:opacity-95  hover:transit">
             {children}
             <div className="text-white">
                 <p className="text-xs">Download on</p>

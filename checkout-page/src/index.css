@@ -16,6 +16,9 @@
   .heading-3 {
     @apply text-lg font-bold my-3;
   }
+  .transit {
+    @apply transition-all duration-150 ease-in-out;
+  }
 }
 
 @layer utilities {
@@ -60,17 +63,14 @@
   }
   .grid-cols-rep4 {
     grid-template-columns: repeat(4, 25%);
-    
   }
-  .grid-cols-rep3  {
+  .grid-cols-rep3 {
     grid-template-columns: repeat(3, 33%);
-    
   }
   .grid-cols-rep2 {
     grid-template-columns: repeat(2, 50%);
-    
   }
-  .gap-two{
-    gap: 2px
+  .gap-two {
+    gap: 2px;
   }
 }

@@ -16,10 +16,10 @@ import NoContent from './NoContent'
 import LandingPage from './LandingPage';
 import Footer from './components/footer/Footer';
 import SingleProductPage from './features/products/SingleProductPage';
-import Header from './Header';
+import Header from './components/header/Header';
 import store from './store/store.js'
 import { Provider } from 'react-redux'
- import ProductsList from './features/products/ProductsList';
+import ProductsList from './features/products/ProductsList';
 // import produ
 
 
@@ -33,11 +33,11 @@ ReactDOM.render(
           {/* <Route exact path="/" component={Home} /> */}
           <Route path="/cart" component={Cart} />
           <Route path="/collections/:category/product/:productId" render={
-            ({match}) => (
+            ({ match }) => (
               <React.Fragment>
 
                 <Header landingpage={false} />
-                <SingleProductPage match={match}/>
+                <SingleProductPage match={match} />
                 <Footer />
               </React.Fragment>
 

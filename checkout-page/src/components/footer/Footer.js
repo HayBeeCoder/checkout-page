@@ -4,6 +4,7 @@ import FooterIcon from './sub-components/FooterIcon'
 import { FaFacebook, FaTwitter, FaInstagram, FaYoutube, FaApple } from 'react-icons/fa';
 import { DiAndroid } from "react-icons/di"
 import { Link } from 'react-router-dom';
+import FooterLink from './sub-components/Footerlink';
 function Footer(props) {
     return (
         <div className="p-5 bg-purple-100">
@@ -13,44 +14,63 @@ function Footer(props) {
                     <div>
                         <h3 className="heading-3">About shopr</h3>
                         <ul>
-                            <li>About Us</li>
-                            <li>Contact Us</li>
-                            <li>Terms and Conditions</li>
-                            <li>About Us</li>
-                            <li>Contact Us</li>
-                            <li>Terms and Conditions</li>
+                            <FooterLink href="/about-us" link="About Us" />
+                            <FooterLink href="/contact" link="Contact Us" />
+                            <FooterLink href="/terms_conditions" link="Terms and Conditions" />
+                            {/* <FooterLink href="/about-us" link="About Us"/> */}
+                            {/* <li>
+                                <Link to="/" className="self-">
+                                    About Us
+                                </Link>
+                            </li>
+                            <li>
+                                <Link to="/" className="self-">
+
+                                    Contact Us
+                                </Link>
+                            </li>
+                            <li>
+                                <Link to="/" className="self-">
+
+                                    Terms and Conditions
+                                </Link>
+                            </li> */}
                         </ul>
                     </div>
                     <div>
                         <h3 className="heading-3">Payment</h3>
                         <ul>
-                            <li>shoprPay</li>
-                            <li>Wallet</li>
+                            <FooterLink href="/shoprPay" link="shoprPay" />
+                            <FooterLink href="/wallet" link="Wallet" />
+                            <FooterLink href="/verve" link="Verve" />
+                            <FooterLink href="/mastercard" link="Mastercard" />
+                            <FooterLink href="/visa" link="Visa" />
+                            {/* <li>Wallet</li>
                             <li>Verve</li>
                             <li>MasterCard</li>
-                            <li>Visa</li>
+                            <li>Visa</li>  
+                                                      <li>shoprPay</li> */}
+
                         </ul>
                     </div>
                     <div>
                         <h3 className="heading-3">Buying on shopr</h3>
                         <ul>
-                            <li>FAQs</li>
-                            <li>Delivery</li>
-                            <li>shopr Return Policy</li>
-                            <li>Digital Services</li>
-                            <li>Bulk Purchase</li>
-                            <li>Buyer safety center</li>
+                            <FooterLink href="/faqs" link="FAQs" />
+                            <FooterLink href="/return-policy" link="Shopr Return Policy" />
+                            <FooterLink href="/bulk-purchase" link="Bulk Purchase" />
+                            <FooterLink href="/digital-services" link="Digital Services" />
+                            <FooterLink href="/buyer-safety-center" link="Buyer Safety Center" />
 
                         </ul>
                     </div>
                     <div>
                         <h3 className="heading-3">More Info</h3>
                         <ul>
-                            <li>Site Map</li>
-                            <li>Track My Order</li>
-                            <li>Private Policy</li>
-                            <li>Authenticity Policy</li>
-
+                            <FooterLink href="/bulk-purchase" link="Site Map" />
+                            <FooterLink href="/track-my-order" link="Track My Order" />
+                            <FooterLink href="/private-policy" link="Private Policy" />
+                            <FooterLink href="/authencity-policy" link="Authencity Policy" />
                         </ul>
                     </div>
 

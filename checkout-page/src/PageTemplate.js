@@ -1,5 +1,5 @@
 import React from 'react';
-import Header from "./Header";
+import Header from "./components/header/Header";
 import Summary from "./summary";
 import Progress from './progress';
 function PageTemplate({ children }) {
