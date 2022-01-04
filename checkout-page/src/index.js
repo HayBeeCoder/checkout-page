@@ -22,6 +22,9 @@ import { Provider } from 'react-redux'
 import ProductsList from './features/products/ProductsList';
 // import produ
 
+import SignUp from "./components/Sign_in_up/SignUp"
+import SignIn from "./components/Sign_in_up/SignIn"
+
 
 ReactDOM.render(
   <React.StrictMode>
@@ -51,6 +54,24 @@ ReactDOM.render(
               <Header landingpage={false} />
 
               <ProductsList />
+
+            </React.Fragment>
+          )} />
+          <Route path="/sign_up" render={() => (
+            <React.Fragment>
+
+              <Header landingpage={false} />
+
+              <SignUp />
+
+            </React.Fragment>
+          )} />
+          <Route path="/sign_in" render={() => (
+            <React.Fragment>
+
+              <Header landingpage={false} />
+
+              <SignIn />
 
             </React.Fragment>
           )} />
