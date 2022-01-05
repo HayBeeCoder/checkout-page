@@ -24,7 +24,7 @@ import ProductsList from './features/products/ProductsList';
 
 import SignUp from "./components/Sign_in_up/SignUp"
 import SignIn from "./components/Sign_in_up/SignIn"
-
+// import 
 
 ReactDOM.render(
   <React.StrictMode>
@@ -60,7 +60,7 @@ ReactDOM.render(
           <Route path="/sign_up" render={() => (
             <React.Fragment>
 
-              <Header landingpage={false} />
+              {/* <Header landingpage={false} /> */}
 
               <SignUp />
 

@@ -6,9 +6,11 @@ function inputelement({ inputClassName, className = "", label, children, type = 
         <li className={"list-none " + className}>
             {children ||
                 <div>
-                    {label && <label htmlFor={label ? label.toLowerCase() : ""} className="custom-label">
+                    {
+                    label && <label htmlFor={label ? label.toLowerCase() : ""} className="custom-label">
                         {label + (important ? "" : " (optional)")}
-                    </label>}
+                    </label>
+                    }
 
                     <input className={" w-full  custom-input " + inputClassName} type={type} name={label ? label.toLowerCase() : ""} id={label ? label.toLowerCase() : ""} placeholder={placeholder} />
 

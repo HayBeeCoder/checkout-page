@@ -22,6 +22,15 @@
 }
 
 @layer utilities {
+  .pr-one {
+    padding: 0px 2px 0 0;
+  }
+  .px-one {
+    padding: 0px 2px;
+  }
+  .py-1rm {
+    padding: 1rem 0rem;
+  }
   .scroll-w-2::-webkit-scrollbar {
     width: 7px;
     color: #6969dd;
@@ -72,5 +81,8 @@
   }
   .gap-two {
     gap: 2px;
+  }
+  .label-offset {
+    top: 0.45rem;
   }
 }
