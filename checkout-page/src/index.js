@@ -69,8 +69,6 @@ ReactDOM.render(
           <Route path="/sign_in" render={() => (
             <React.Fragment>
 
-              <Header landingpage={false} />
-
               <SignIn />
 
             </React.Fragment>

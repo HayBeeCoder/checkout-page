@@ -85,4 +85,7 @@
   .label-offset {
     top: 0.45rem;
   }
+  .h-one {
+    height: 2px;
+  }
 }

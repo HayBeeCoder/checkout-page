@@ -72,7 +72,7 @@ function SignUp(props) {
 
                         </div>
                         <Link to="/users/password/new" className='underline'>
-                            <p className='text-right text-sm'>Forgot password?</p>
+                            <p className='text-right text-sm text-purple-800'>Forgot password?</p>
                         </Link>
                         <Button buttonFor="Sign up with Email." className="mt-3 bg-purple-800 text-white w-full py-1rm text-base" />
                     </form>
