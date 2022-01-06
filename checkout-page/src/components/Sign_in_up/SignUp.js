@@ -14,9 +14,9 @@ function SignUp(props) {
                     <h2 className='heading-2 m-0  leading-tight'>Create An Account</h2>
                     <span>
                         <p >
-                            Already have a shopr account? &nbsp;
-                            <Link to="/sign_in" className='inline-block underline text-purple-800 hover:opacity-90'>
-                                Log in
+                            Not registered ? &nbsp;
+                            <Link to="/sign_up" className='inline-block underline text-purple-800 hover:opacity-90'>
+                                Sign Up
                             </Link>
                         </p>
                     </span>

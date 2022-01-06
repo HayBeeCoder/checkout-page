@@ -11,7 +11,7 @@ function SignUp(props) {
                     <h1 className="my-6 font-logo font-bold  text-3xl leading-normal ">sh<span className="inline-block text-purple-700 ">o</span>pr</h1>
                 </Link>
                 <div>
-                    <h2 className='heading-2 m-0  leading-tight'>Create An Account</h2>
+                    <h2 className='heading-2 m-0  leading-tight'>Welcome Back!</h2>
                     <span>
                         <p >
                             Already have a shopr account? &nbsp;
