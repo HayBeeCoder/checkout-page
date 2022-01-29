@@ -23,16 +23,16 @@ function Collections(props) {
     ]
     return (
 //smooth for smooth scrolling
-        <div smooth id="section-collections" className="py-28">
+        <div smooth="true" id="section-collections" className="py-28">
             <h2 className="heading-2">Our  <span className="text-purple-700">Collections</span> </h2>
             <ul className="grid grid-cols-12  gap-3 w-full overflow-hidden">
                 {categories.map((category, index) => (
-                    <li className={specificClass[index].li}>
+                    <li className={specificClass[index].li} key={index}>
                         <div className="h-96 w-full relative bg-gray-700 overflow-hidden">
                             <div className={"absolute z-20  flex justify-center flex-col gap-7 items-center h-full bg-purple-700 " + specificClass[index].absolute}>
                                 <h3 className="stroke font-display text-5xl font-bold uppercase">{category.category}</h3>
                             <Link to={"/collections/" + category.category}>
-                                    <Button className=" border-1  bg-transparent text-white  py-4 px-16 text-xl tracking-widest" buttonFor="SHOP" />
+                                    <Button className=" border-1  bg-transparent text-white  py-4 px-16 text-xl tracking-widest hover:bg-white hover:text-purple-700" buttonFor="SHOP" />
 
                                 </Link>
 

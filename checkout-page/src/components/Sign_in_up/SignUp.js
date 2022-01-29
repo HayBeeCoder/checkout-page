@@ -1,8 +1,70 @@
 import React from 'react';
-// import Header from '../header/Header'
+import { useState } from 'react';
 import Button from '../../Button';
 import { Link } from "react-router-dom"
+
+const validateForm = error => {
+    let valid = true
+    Object.values(error).forEach(err => err.length > 0 && (valid = false))
+    return valid
+}
+
+
 function SignUp(props) {
+    const [input, setInput] = useState({ first_name: null, last_name: null, email: null, password: null })
+    const [error, setError] = useState({ first_name: '', last_name: '', email: '', password: '' })
+
+    const validEmailRegex = RegExp(
+        /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i
+    );
+    const handleOnChange = name => event => {
+        // { name , value } can also be used in getting the name and  value of the form element
+        event.preventDefault()
+        let { value } = event.target
+        let err = error
+        value = value.trim();
+
+        //find a more optimized alternative for switch in this context
+        switch (name) {
+            case "first_name":
+                err[name] = value && value.length > 1 ? ""
+                    : "First name can't be empty!";
+                break;
+            case "last_name":
+                err[name] = value && value.length > 1 ? ""
+                    : "Last name can't be empty";
+                break;
+            case "email":
+                err[name] = validEmailRegex.test(value) ? ""
+                    : "Enter a valid email!";
+                break;
+            case "password":
+                err[name] = value.length > 8 ? ""
+                    : "Password must be at least 8 characters long with no space"
+                break;
+            default:
+                break;
+        }
+        setInput({ ...input, [name]: value })
+        setError(err)
+    }
+
+    console.log(error, input)
+
+
+
+    const handleSubmit = (event) => {
+        event.preventDefault()
+        if (validateForm(error)) {
+
+            console.log("Form is Valid!")
+        } else {
+            console.log(error)
+            console.log("Form is Invalid")
+        }
+    }
+
+
     return (
 
         <div className='flex items-center justify-center text-center'>
@@ -14,14 +76,20 @@ function SignUp(props) {
                     <h2 className='heading-2 m-0  leading-tight'>Create An Account</h2>
                     <span>
                         <p >
-                            Not registered ? &nbsp;
-                            <Link to="/sign_up" className='inline-block underline text-purple-800 hover:opacity-90'>
-                                Sign Up
+                            Already registered ? &nbsp;
+                            <Link to="/sign_in" className='inline-block underline text-purple-800 hover:opacity-90'>
+                                Log In
                             </Link>
                         </p>
                     </span>
                 </div>
-                <div className=' py-6 flex justify-between  '>
+
+                {/* =====================
+            Later on , Implement a third party sign up
+            ===================== */}
+
+
+                {/* <div className=' py-6 flex justify-between  '>
                     <a href="" className='py-1 px-3 border-1 border-solid inline-block rounded-md'>
                         Google
                     </a>
@@ -33,42 +101,40 @@ function SignUp(props) {
                     </a>
 
 
-                </div>
                 <div className='my-3'>
 
-                    {/* <p class=" relative after:absolute after:-z-20  after:h-1 after:top-1/2 transform after:-translate-y-1/2  before:h-full after:bg-red-400 after:left-1/2 after:-translate-x-1/2   before:absolute before:-z-10    before:block before:-left-2 before:-right-2 before:bg-white after:w-96 after:block  ">Or</p> */}
-                    {/* <p class="inline-block relative after:absolute after:-z-20  after:h-1 after:top-1/2 transform after:-translate-y-1/2  before:h-full after:bg-rose-400 before:absolute before:-z-10    before:block before:-left-2 before:-right-2 before:bg-white after:w-screen after:block  after:left-1/2 after:-translate-x-1/2 ">Or</p>  */}
-                    {/* <p className='relative after:absolute after:h-3 after:w-full after:bg-red-300 before:bg-yellow-300'>aslfkdasdfhh </p> */}
-                    <p>Or</p>
+                   <p>Or</p>
 
                 </div>
+                </div> */}
 
                 <div>
-                    <form action="">
+                    {/* Clear all the shitty placeholders you've got here Man! ;( */}
+                    <form onSubmit={handleSubmit}>
                         <div className="flex justify-between gap-4 my-5">
                             <div className="relative ">
 
-                                <input type="text" id="firstName" name="firstName" className="peer px-4 h-10 w-full border-gray-300 rounded-md text-gray-900 placeholder-transparent focus:outline-none focus:border-purple-600 border-1 focus:shadow-input" placeholder="Emailsdafdfasd Address" />
-                                <label for="firstName" className="bg-white leading-none text-sm left-0  text-gray-600 px-one absolute -top-2 peer-placeholder-shown:label-offset peer-placeholder-shown:left-4 peer-placeholder-shown:text-base  peer-placeholder-shown:text-gray-400 peer-focus:text-sm peer-focus:px-2 peer-focus:left-4 peer-focus:text-purple-800 peer-focus:-top-2 transition-all peer-focus:pl-0 peer-focus:pr-one peer-focus:leading-none  peer-focus:bg-white">First Name</label>
+                                <input type="text" id="firstName" name="firstName" className="peer px-4 h-10 w-full border-gray-300 rounded-md text-gray-900 placeholder-transparent focus:outline-none focus:border-purple-600 border-1 focus:shadow-input" placeholder="Emailsdafdfasd Address" onChange={handleOnChange("first_name")} />
+                                <label htmlFor="firstName" className="bg-white leading-none text-sm left-0  text-gray-600 px-one absolute -top-2 peer-placeholder-shown:label-offset peer-placeholder-shown:left-4 peer-placeholder-shown:text-base  peer-placeholder-shown:text-gray-400 peer-focus:text-sm peer-focus:px-2 peer-focus:left-4 peer-focus:text-purple-800 peer-focus:-top-2 transition-all peer-focus:pl-0 peer-focus:pr-one peer-focus:leading-none  peer-focus:bg-white">First Name</label>
 
                             </div>
                             <div className="relative ">
 
-                                <input type="text" id="lastName" name="lastName" class="peer px-4 h-10 w-full border-gray-300 rounded-md text-gray-900 placeholder-transparent focus:outline-none focus:border-purple-600 border-1 focus:shadow-input" placeholder="Emailsdafdfasd Address" />
-                                <label for="lastName" class="bg-white leading-none text-sm left-0  text-gray-600 px-one absolute -top-2 peer-placeholder-shown:label-offset peer-placeholder-shown:left-4 peer-placeholder-shown:text-base  peer-placeholder-shown:text-gray-400 peer-focus:text-sm peer-focus:px-2 peer-focus:left-4 peer-focus:text-purple-800 peer-focus:-top-2 transition-all peer-focus:pl-0 peer-focus:pr-one peer-focus:leading-none  peer-focus:bg-white">Last Name</label>
+                                <input type="text" id="lastName" name="lastName" className="peer px-4 h-10 w-full border-gray-300 rounded-md text-gray-900 placeholder-transparent focus:outline-none focus:border-purple-600 border-1 focus:shadow-input" placeholder="Emailsdafdfasd Address" onChange={handleOnChange("last_name")} />
+                                <label htmlFor="lastName" className="bg-white leading-none text-sm left-0  text-gray-600 px-one absolute -top-2 peer-placeholder-shown:label-offset peer-placeholder-shown:left-4 peer-placeholder-shown:text-base  peer-placeholder-shown:text-gray-400 peer-focus:text-sm peer-focus:px-2 peer-focus:left-4 peer-focus:text-purple-800 peer-focus:-top-2 transition-all peer-focus:pl-0 peer-focus:pr-one peer-focus:leading-none  peer-focus:bg-white">Last Name</label>
 
                             </div>
                         </div>
                         <div className="relative my-5">
 
-                            <input type="text" id="email" name="email" className="peer px-4 h-10 w-full border-gray-300 rounded-md text-gray-900 placeholder-transparent focus:outline-none focus:border-purple-600 border-1 focus:shadow-input" placeholder="Emailsdafdfasd Address" />
-                            <label for="email" className="bg-white leading-none text-sm left-0  text-gray-600 px-one absolute -top-2 peer-placeholder-shown:label-offset peer-placeholder-shown:left-4 peer-placeholder-shown:text-base  peer-placeholder-shown:text-gray-400 peer-focus:text-sm peer-focus:px-2 peer-focus:left-4 peer-focus:text-purple-800 peer-focus:-top-2 transition-all peer-focus:pl-0 peer-focus:pr-one peer-focus:leading-none  peer-focus:bg-white">Email Address</label>
+                            <input type="text" id="email" name="email" className="peer px-4 h-10 w-full border-gray-300 rounded-md text-gray-900 placeholder-transparent focus:outline-none focus:border-purple-600 border-1 focus:shadow-input" placeholder="Emailsdafdfasd Address" onChange={handleOnChange("email")} />
+                            <label htmlFor="email" className="bg-white leading-none text-sm left-0  text-gray-600 px-one absolute -top-2 peer-placeholder-shown:label-offset peer-placeholder-shown:left-4 peer-placeholder-shown:text-base  peer-placeholder-shown:text-gray-400 peer-focus:text-sm peer-focus:px-2 peer-focus:left-4 peer-focus:text-purple-800 peer-focus:-top-2 transition-all peer-focus:pl-0 peer-focus:pr-one peer-focus:leading-none  peer-focus:bg-white">Email Address</label>
 
                         </div>
                         <div className="relative mt-5 mb-4">
 
-                            <input type="password" id="password" name="password" className="peer px-4 h-10 w-full border-gray-300 rounded-md text-gray-900 placeholder-transparent focus:outline-none focus:border-purple-600 border-1 focus:shadow-input" placeholder="Emailsdafdfasd Address" />
-                            <label for="password" className="bg-white leading-none text-sm left-0  text-gray-600 px-one absolute -top-2 peer-placeholder-shown:label-offset peer-placeholder-shown:left-4 peer-placeholder-shown:text-base  peer-placeholder-shown:text-gray-400 peer-focus:text-sm peer-focus:px-2 peer-focus:left-4 peer-focus:text-purple-800 peer-focus:-top-2 transition-all peer-focus:pl-0 peer-focus:pr-one peer-focus:leading-none  peer-focus:bg-white">Password</label>
+                            <input type="password" id="password" name="password" className="peer px-4 h-10 w-full border-gray-300 rounded-md text-gray-900 placeholder-transparent focus:outline-none focus:border-purple-600 border-1 focus:shadow-input" placeholder="Emailsdafdfasd Address" onChange={handleOnChange("password")} />
+                            <label htmlFor="password" className="bg-white leading-none text-sm left-0  text-gray-600 px-one absolute -top-2 peer-placeholder-shown:label-offset peer-placeholder-shown:left-4 peer-placeholder-shown:text-base  peer-placeholder-shown:text-gray-400 peer-focus:text-sm peer-focus:px-2 peer-focus:left-4 peer-focus:text-purple-800 peer-focus:-top-2 transition-all peer-focus:pl-0 peer-focus:pr-one peer-focus:leading-none  peer-focus:bg-white">Password</label>
 
                         </div>
                         <Link to="/users/password/new" className='underline'>

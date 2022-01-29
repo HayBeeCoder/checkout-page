@@ -8,6 +8,7 @@ import childrenCollection from './assets/images/landscape-male.jpg'
 import Button from './Button.js';
 import Collections from './Collections';
 import Subscription from './Subscription';
+import Slider from "./components/header/sub-components/slider/Slider.js"
 
 import Footer from './components/footer/Footer';
 
@@ -29,8 +30,8 @@ const LandingPage = () => {
                     </HashLink>
 
                 </div>
-                <img src={desktopHero} alt="" className=" object-cover  w-full h-full" />
-            </div>
+                <Slider image={desktopHero} />
+                 </div>
             <Collections />
             <Subscription />
             <Footer />

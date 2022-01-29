@@ -4,14 +4,12 @@ import { useLocation } from 'react-router';
 // import Products from './Products';
 import {useSelector} from "react-redux"
 
-//  import React from 'react';
-// import { products } from './models/data'
-// import { useSelector } from "react-red"
-// import { FaHeart } from "react-icons/fa"
 import { AiOutlineHeart, AiFillHeart } from "react-icons/ai"
+import { selectAll } from './productsSlice';
 import { Link } from "react-router-dom"
 function Products(props) {
-    const products = useSelector(state => state.products)
+    const products = useSelector(selectAll)
+    console.log(products)
     const location = useLocation();
     const category = location.pathname.split("/")[2]
     // console.log(category)

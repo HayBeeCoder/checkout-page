@@ -4,15 +4,13 @@ import { Redirect } from "react-router-dom";
 import NoContent from "../../NoContent";
 import Button from "../../Button";
 import React from 'react';
+import { selectAll } from "./productsSlice";
 
 function SingleProductPage({ match }) {
-    const products = useSelector(state => state.products)
+    const products = useSelector(selectAll)
     //instead of location hook, i used match props. looks faster kinda
-    //     const location = useLocation();
-    //   const productId = location.pathname.split("/")[4]
-         console.log(match)
     const { productId } = match.params
-    // console.log(productId)
+    
     const product = products.filter(product => product.id == productId)[0]
     
   if (!product) {
