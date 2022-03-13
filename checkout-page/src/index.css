@@ -7,6 +7,7 @@
   .custom-input {
     @apply block outline-none text-sm p-3 bg-gray-200 rounded-sm;
   }
+  
   .custom-label {
     @apply my-0.5 block text-sm;
   }
@@ -59,6 +60,9 @@
   }
   .text-cart {
     font-size: 0.7em;
+  }
+  .p-cart{
+    padding: 1px;
   }
 
   .auto-rows-3 {

@@ -2,21 +2,35 @@ import React, { Component } from 'react';
 // import Header from './Header';
 import { useLocation } from 'react-router';
 // import Products from './Products';
-import {useSelector} from "react-redux"
-
+import { useSelector } from "react-redux"
+import { useGetProductsQuery } from '../api/apiSlice';
 import { AiOutlineHeart, AiFillHeart } from "react-icons/ai"
 import { selectAll } from './productsSlice';
 import { Link } from "react-router-dom"
+
 function Products(props) {
+
+    const {
+        data = [],
+        isLoading,
+        isSuccess,
+        isError,
+        error
+    } = useGetProductsQuery()
+
+    console.log(" This is the server response: " , data)
+    console.log("is it loading? " , isLoading)
     const products = useSelector(selectAll)
-    console.log(products)
+    // console.log(products)
     const location = useLocation();
     const category = location.pathname.split("/")[2]
     // console.log(category)
-    const filtered_products = products.filter(product => product.category == category)
+    // const filtered_products = products.filter(product => product.category == category)
+    // const filtered_products = data.data.filter(product => product.category == category)
     // console.log(products)
     return (
         <div>
+            {!isLoading && "currently loading shit man damn!"}
             {/* <Header landingpage={false} /> */}
             <div className="py-7 ">
                 <div className="sm:px-2 px-5">
@@ -29,16 +43,18 @@ function Products(props) {
                         {/* <div className="w-full"> */}
 
 
-                        {filtered_products
-                            .map((product) =>
-                                <div key={product.id} className="rounded overflow-hidden drop-shadow-sm mb-5 sm:w-full " collection_in={filtered_products}>
+                        {/* {filtered_products */}
+                        {!isLoading && data.data.map((product) =>
+                        // collection_in={filtered_products}
+                                <div key={product.id} className="rounded overflow-hidden drop-shadow-sm mb-5 sm:w-full " >
                                     {/* <Link to={'/collections/' + product.category + '/product/' + product.id} > */}
-                                    <Link to={`/collections/${product.category}/product/${product.id}`} >
+                                    <Link to={`/collections/${product.categories[0]}/product/${product._id}`} >
                                         {/* <Link to={'/collections/' + product.category + '/' + product.id} > */}
-
+                                        <span>{product.categories[0]}</span>
+                                        <span>{product._id}</span>
                                         <div className="relative w-full">
                                             <div className="relative pb-full bg-purple-400 overflow-hidden">
-                                                <img src={product.image[0]} alt={product.name} className="absolute top-0 left-0 " />
+                                                <img src={product.images[0]} alt={product.title} className="absolute top-0 left-0 " />
                                             </div>
                                             <div className="absolute top-0 right-0 p-3">
                                                 <AiOutlineHeart className="text-2xl" />
@@ -50,7 +66,7 @@ function Products(props) {
                                             </div>
                                         </div>
                                         <div className="p-4 ">
-                                            <p className="text-sm font-semibold">{product.name}</p>
+                                            <p className="text-sm font-semibold">{product.title}</p>
                                             <p className="font-light text-sm">4 colors available</p>
 
                                         </div>

@@ -49,19 +49,27 @@ function SignUp(props) {
         setError(err)
     }
 
-    console.log(error, input)
+    // console.log(error, input)
 
 
 
     const handleSubmit = (event) => {
         event.preventDefault()
-        if (validateForm(error)) {
-
-            console.log("Form is Valid!")
-        } else {
+        if (!validateForm(error)) {
             console.log(error)
             console.log("Form is Invalid")
+        } else {
+
+            // console.log("Form is Valid!")
+            const { first_name, last_name, email, password } = input;
+            const user = {
+                name: `${first_name + " " + last_name}`,
+                email,
+                password
+            }
+            console.log(user)
         }
+
     }
 
 
@@ -73,11 +81,16 @@ function SignUp(props) {
                     <h1 className="my-6 font-logo font-bold  text-3xl leading-normal ">sh<span className="inline-block text-purple-700 ">o</span>pr</h1>
                 </Link>
                 <div>
-                    <h2 className='heading-2 m-0  leading-tight'>Create An Account</h2>
+                    <h2 className=' sm:text-xl heading-2 m-0  leading-tight '>
+                        <span className='text-purple-800'>
+                            Create
+                        </span>
+                             &nbsp;
+                        An Account</h2>
                     <span>
                         <p >
                             Already registered ? &nbsp;
-                            <Link to="/sign_in" className='inline-block underline text-purple-800 hover:opacity-90'>
+                            <Link to="/sign_in" className='inline-block border-b-solid border-b-purple-800 border-b-1 text-purple-800 hover:opacity-90 hover:border-0'>
                                 Log In
                             </Link>
                         </p>
@@ -108,10 +121,10 @@ function SignUp(props) {
                 </div>
                 </div> */}
 
-                <div>
+                <div className='px-7'>
                     {/* Clear all the shitty placeholders you've got here Man! ;( */}
                     <form onSubmit={handleSubmit}>
-                        <div className="flex justify-between gap-4 my-5">
+                        <div className="sm:flex-col flex justify-between gap-5 my-5">
                             <div className="relative ">
 
                                 <input type="text" id="firstName" name="firstName" className="peer px-4 h-10 w-full border-gray-300 rounded-md text-gray-900 placeholder-transparent focus:outline-none focus:border-purple-600 border-1 focus:shadow-input" placeholder="Emailsdafdfasd Address" onChange={handleOnChange("first_name")} />
@@ -137,9 +150,13 @@ function SignUp(props) {
                             <label htmlFor="password" className="bg-white leading-none text-sm left-0  text-gray-600 px-one absolute -top-2 peer-placeholder-shown:label-offset peer-placeholder-shown:left-4 peer-placeholder-shown:text-base  peer-placeholder-shown:text-gray-400 peer-focus:text-sm peer-focus:px-2 peer-focus:left-4 peer-focus:text-purple-800 peer-focus:-top-2 transition-all peer-focus:pl-0 peer-focus:pr-one peer-focus:leading-none  peer-focus:bg-white">Password</label>
 
                         </div>
-                        <Link to="/users/password/new" className='underline'>
-                            <p className='text-right text-sm text-purple-800'>Forgot password?</p>
+                        <p className='text-right'>
+{/* underline-1 is a custom class  */}
+                        <Link to="/users/password/new" className='text-sm text-purple-800  hover:border-0 border-b-solid border-b-purple-800 border-b-2'>
+                            Forgot password?
                         </Link>
+                        </p>
+                        {/* py-1rm is a custom class in index.css  */}
                         <Button buttonFor="Sign up with Email." className="mt-3 bg-purple-800 text-white w-full py-1rm text-base" />
                     </form>
                 </div>
@@ -148,5 +165,6 @@ function SignUp(props) {
 
     );
 }
+
 
 export default SignUp;

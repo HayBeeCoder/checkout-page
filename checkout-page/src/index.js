@@ -26,6 +26,12 @@ import SignUp from "./components/Sign_in_up/SignUp"
 import SignIn from "./components/Sign_in_up/SignIn"
 // import 
 
+//account
+import SavedItems from "./pages/account/savedItems"
+import personalAccount from "./pages/account/personalAccount"
+import PaymentInfo from './pages/account/PaymentInfo'
+import ShippingInfo from './pages/account/ShippingInfo'
+
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
@@ -79,6 +85,14 @@ ReactDOM.render(
           <Route path="/checkout/delivery" component={Deliver} />
           <Route path="/checkout/payment" component={Payment} />
           <Route path="/checkout/review" component={Review} />
+
+          <Route exact path="/account" component={personalAccount}/>
+          <Route path="/account/saved-items" component={SavedItems}/>
+           <Route path="/account/payment-info" component={PaymentInfo}/>
+          <Route path="/account/shipping-info" component={ShippingInfo}/>
+          {/*
+          <Route path="/account" component={}/>
+          <Route path="/account" component={}/> */}
           <Route component={NoContent} />
 
         </Switch>

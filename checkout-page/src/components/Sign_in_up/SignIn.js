@@ -64,8 +64,8 @@ function SignIn(props) {
 
                 </div> */}
 
-                <div>
-                    <form action="">
+                <div className='px-7'>
+                    <form action="POST">
 
                         <div className="relative my-5">
 

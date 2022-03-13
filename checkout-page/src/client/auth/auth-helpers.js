@@ -1,3 +1,4 @@
+import { signout } from "./api-auth.js"
 
 const authenticate = (jwt , callback) =>{
     if (typeof window !== "undefined"){
@@ -25,3 +26,5 @@ const signout = ( callback ) => {
         })
     }
 }
+
+export { authenticate,isAuthenticated,signout}

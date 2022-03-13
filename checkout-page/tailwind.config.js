@@ -3,10 +3,11 @@ module.exports = {
 
   purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
   darkMode: false, // or 'media' or 'class'
-  mode: 'jit',
+    // mode: 'jit',
   theme: {
     boxShadow: {
       'input': '0 0 0.125rem 0.125rem rgb(109 40 217 / 15%)',
+      'shadow-1': "0 0 0.125rem 0.125rem rgb(64 64 64 / 10%)",
     },
     screens: {
       '2xl': { 'max': '1535px' },
@@ -43,7 +44,9 @@ module.exports = {
     },
   },
   variants: {
-    extend: {},
+    extend: {
+      fontWeight: ['hover','active']
+    },
   },
   plugins: [],
 }

@@ -5,6 +5,7 @@ import NoContent from "../../NoContent";
 import Button from "../../Button";
 import React from 'react';
 import { selectAll } from "./productsSlice";
+import {useGetSingleProductQuery} from "../api/apiSlice"
 
 function SingleProductPage({ match }) {
     const products = useSelector(selectAll)
