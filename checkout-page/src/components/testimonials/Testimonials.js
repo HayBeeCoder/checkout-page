@@ -25,15 +25,17 @@ function Testimonials({ }) {
         const { direction } = e.target.dataset
         if (direction == 'left') {
             if (activeIndex == 0) {
-                return setState({
+                setState({
                     ...state,
                 })
+            }else{
+
+                setState({
+                    ...state,
+                    activeIndex: activeIndex - 1,
+                    translate: (activeIndex - 1) * getWidth()
+                })
             }
-            setState({
-                ...state,
-                activeIndex: activeIndex - 1,
-                translate: (activeIndex - 1) * getWidth()
-            })
         }
 
         if (direction == 'right') {
@@ -41,14 +43,16 @@ function Testimonials({ }) {
                 return setState({
                     ...state,
                 })
+            }else{
+
+                setState({
+                    ...state,
+                    activeIndex: activeIndex + 1,
+                    translate: (activeIndex + 1) * getWidth()
+                })
             }
-            setState({
-                ...state,
-                activeIndex: activeIndex + 1,
-                translate: (activeIndex + 1) * getWidth()
-            })
         }
-        console.log(translate)
+        // console.log(translate)
     }
 
     return (
@@ -59,9 +63,9 @@ function Testimonials({ }) {
             </div>
 
             < div className='bg-purple-200 py-28 w-full relative overflow-hidden' >
-        <div className="flex w-full " style={{ transform: `translateX(-${translate}px)`, width: `${getWidth()}px` , transition: "transform ease-out 0.45s" , scrollSnapType: "both mandatory"}} >
+        <div className="flex w-full " style={{ transform: `translateX(-${translate}px)`, width: `${getWidth()}px` , transition: "transform ease-out 0.45s" }} >
 
-                    <div className='flex-shrink-0 w-full  px-14 inline-flex gap-8 justify-between relative' style={{scrollSnapAlign: "center"}}>
+                    <div className='flex-shrink-0 w-full  px-14 inline-flex gap-8 justify-between relative' >
 
                         <div className=' w-3/6 flex-shrink'>
                             <p className='text-base font-semibold'>From the people</p>
@@ -86,7 +90,7 @@ function Testimonials({ }) {
                             {/* <img src="../../assets/images/B29-sneaker/pic1.webp" alt="product"/> */}
                         </div>
                     </div>
-                    <div className='flex-shrink-0 w-full flex-grow  px-14 inline-flex gap-8 justify-between relative' style={{scrollSnapAlign: "center"}}>
+                    <div className='flex-shrink-0 w-full flex-grow  px-14 inline-flex gap-8 justify-between relative' >
 
                         <div className=' w-3/6 flex-shrink'>
                             <p className='text-base font-semibold'>From the people</p>

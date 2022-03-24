@@ -1,4 +1,7 @@
 import { nanoid } from 'nanoid'
+import Man from "../assets/images/collections/landscape-man-bg-black.jpg"
+import Woman from "../assets/images/collections/landscape-woman-hat.jpg"
+import Child from "../assets/images/collections/landscape-child-white-bg.jpg"
 import menCollection from '../assets/images/landscape-male.jpg'
 import womenCollection from '../assets/images/landscape-female.jpeg'
 import childrenCollection from '../assets/images/landscape-male.jpg'
@@ -158,21 +161,21 @@ import childrenCollection from '../assets/images/landscape-male.jpg'
 //     },
 
 // ]
-
+import Men from ".."
 export const categories = [
     {
         id: nanoid(),
-        img: "https://res.cloudinary.com/abasscodes/image/upload/v1647786919/shopr/homepage-collections/potrait-man_t3qqs5.jpg",
+        img: Man,
         category: "men",
     },
     {
         id: nanoid(),
-        img: "https://res.cloudinary.com/abasscodes/image/upload/v1647786918/shopr/homepage-collections/collections-female_roybes.jpg",
+        img: Woman,
         category: "women",
     },
     {
         id: nanoid(),
-        img: "https://res.cloudinary.com/abasscodes/image/upload/v1647786918/shopr/homepage-collections/kid_d2iiux.jpg",
+        img: Child,
         category: "children",
     },
 ]
