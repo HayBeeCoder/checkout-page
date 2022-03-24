@@ -5,33 +5,43 @@ import NoContent from "../../NoContent";
 import Button from "../../Button";
 import React from 'react';
 import { selectAll } from "./productsSlice";
+import { selectLoaded } from "../api/apiSlice";
 import {useGetSingleProductQuery} from "../api/apiSlice"
 
 function SingleProductPage({ match }) {
-    const products = useSelector(selectAll)
-    //instead of location hook, i used match props. looks faster kinda
-    const { productId } = match.params
+    console.log(match.params.productId)
+    const { data: data, isLoading, isSuccess} = useGetSingleProductQuery(match.params.productId)
+    // const products = useSelector(selectLoaded)
+    console.log("is single post fetching?" , isLoading)
+    // console.log(state)
+    // const products = state
+    // //instead of location hook, i used match props. looks faster kinda
+    // const { productId } = match.params
     
-    const product = products.filter(product => product.id == productId)[0]
+    // const product =  data.filter(product => product.id == productId)[0]
+    console.log(data)
+    const product = !isLoading && data.data
     
-  if (!product) {
-    return (
-      <section>
-        {/* <h2>Post not found!</h2> */}
-        <Redirect to="/404/" component={NoContent}/>
-      </section>
-    )
-  }
+//   if (!product) {
+//     return (
+//       <section>
+//         {/* <h2>Post not found!</h2> */}
+//         <Redirect to="/404/" component={NoContent}/>
+//       </section>
+//     )
+//   }
 
     return (
         // <>
 
-        <div>
-            {/* <Header /> */}
-            <div className="py-8 px-5 grid grid-cols-12 items-start gap-2">
+    <div>
+
+    {/* <Header /> */}
+    {!isLoading && 
+    <div className="py-8 px-5 grid grid-cols-12 items-start gap-2">
                 <div className="col-start-1 col-span-8 grid grid-cols-6 gap-2 ">
                     {
-                        product.image
+                        product.images
                             .map((image, index) => (
                                 <div className={index % 2 ? " bg-red-300 col-start-4 col-span-3 pb-full relative overflow-hidden" : "col-start-1 col-span-3 pb-full relative overflow-hidden bg-red-300"} >
                                     <img src={image} alt="" className="absolute top-0 left-0  w-full" />
@@ -73,11 +83,12 @@ function SingleProductPage({ match }) {
                     </>
                 </div>
             </div>
+            }
             {/* <Footer /> */}
 
-        </div>
-
-    );
+            </div>
+            
+            );
 }
 
 export default SingleProductPage;

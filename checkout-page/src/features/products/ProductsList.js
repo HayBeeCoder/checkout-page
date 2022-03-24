@@ -30,7 +30,7 @@ function Products(props) {
     // console.log(products)
     return (
         <div>
-            {!isLoading && "currently loading shit man damn!"}
+            {isLoading && "currently loading shit man damn!"}
             {/* <Header landingpage={false} /> */}
             <div className="py-7 ">
                 <div className="sm:px-2 px-5">
@@ -50,9 +50,7 @@ function Products(props) {
                                     {/* <Link to={'/collections/' + product.category + '/product/' + product.id} > */}
                                     <Link to={`/collections/${product.categories[0]}/product/${product._id}`} >
                                         {/* <Link to={'/collections/' + product.category + '/' + product.id} > */}
-                                        <span>{product.categories[0]}</span>
-                                        <span>{product._id}</span>
-                                        <div className="relative w-full">
+                                          <div className="relative w-full">
                                             <div className="relative pb-full bg-purple-400 overflow-hidden">
                                                 <img src={product.images[0]} alt={product.title} className="absolute top-0 left-0 " />
                                             </div>

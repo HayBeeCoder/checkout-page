@@ -1,6 +1,7 @@
 import { createSlice   } from "@reduxjs/toolkit"
+import { apiSlice } from "../api/apiSlice"
 // import { nanoid } from "nanoid"
-
+// export const selectUsersResult = apiSlice.endpoints.getUsers.select()
 const initialState = [
 
     // {

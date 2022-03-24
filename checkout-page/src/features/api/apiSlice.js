@@ -23,3 +23,5 @@ export const apiSlice = createApi({
 
 // Export the auto-generated hook for the `getPosts` query endpoint
 export const { useGetProductsQuery ,useGetSingleProductQuery} = apiSlice
+
+export const selectLoaded = state => state.api.queries.data

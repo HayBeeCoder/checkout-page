@@ -1,45 +1,31 @@
-import { categories } from './models/data'
-import Button from './Button.js';
+import { categories } from '../../../models/data'
+import Button from '../../../Button';
 import React from 'react';
 import { Link } from 'react-router-dom';
 
 function Collections(props) {
-    const specificClass = [
-        {
-            li: "col-start-4 col-span-6",
-            absolute: "left-0 right-1/2",
-
-        },
-        {
-            li: "col-start-1 col-span-6",
-            absolute: "right-0 left-1/2",
-
-        },
-        {
-            li: "col-start-7 col-span-6",
-            absolute: "left-0 right-1/2",
-
-        },
-    ]
+  
     return (
 //smooth for smooth scrolling
-        <div smooth="true" id="section-collections" className="py-28">
+        <div smooth="true" id="section-collections" className="py-28 px-20">
             <h2 className="heading-2">Our  <span className="text-purple-700">Collections</span> </h2>
-            <ul className="grid grid-cols-12  gap-3 w-full overflow-hidden">
+            <ul className="flex justify-between flex-grow gap-20">
                 {categories.map((category, index) => (
-                    <li className={specificClass[index].li} key={index}>
-                        <div className="h-96 w-full relative bg-gray-700 overflow-hidden">
+                    <li className="w-2/6 " key={index}>
+                        <div className="w-full relative rounded-xl overflow-hidden ">
+                            <img src={category.img} alt="" className="inline-block object-contain " />
+                        {/* <div className="h-96 w-full relative bg-gray-700 overflow-hidden">
                             <div className={"absolute z-20  flex justify-center flex-col gap-7 items-center h-full bg-purple-700 " + specificClass[index].absolute}>
                                 <h3 className="stroke font-display text-5xl font-bold uppercase">{category.category}</h3>
+                                
+                            </div> */}
+
+                        </div>
+                        <p className='uppercase text-sm mt-2 mb-4 font-light'>{category.category + "'s"}</p>
                             <Link to={"/collections/" + category.category}>
-                                    <Button className=" border-1  bg-transparent text-white  py-4 px-16 text-xl tracking-widest hover:bg-white hover:text-purple-700" buttonFor="SHOP" />
+                                    <Button className="text-base bg-purple-800 text-white px-8" buttonFor="shop" />
 
                                 </Link>
-
-                            </div>
-
-                            <img src={category.img} alt="" className="inline-block absolute bottom-0 top-0 left-0 " />
-                        </div>
                     </li>
                 ))}
 

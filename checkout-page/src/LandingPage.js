@@ -6,7 +6,8 @@ import menCollection from './assets/images/landscape-male.jpg'
 import womenCollection from './assets/images/landscape-female.jpeg'
 import childrenCollection from './assets/images/landscape-male.jpg'
 import Button from './Button.js';
-import Collections from './Collections';
+import Collections from '../src/components/header/sub-components/Collections';
+import Testimonials from '../src/components/testimonials/Testimonials';
 import Subscription from './Subscription';
 import Slider from "./components/header/sub-components/slider/Slider.js"
 
@@ -30,9 +31,11 @@ const LandingPage = () => {
                     </HashLink>
 
                 </div>
-                <Slider image={desktopHero} />
+                {/* <div > <video src={}></video> */}
+                {/* <Slider image={desktopHero} /> */}
                  </div>
             <Collections />
+           <Testimonials/>
             <Subscription />
             <Footer />
         </div>

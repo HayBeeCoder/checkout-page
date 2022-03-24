@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 import FooterLink from './sub-components/Footerlink';
 function Footer(props) {
     return (
-        <div className="p-5 bg-purple-100">
+        <div className="p-5 ">
             <div className="flex justify-between py-20">
                 <div className="w-3/5 flex justify-between">
 
@@ -127,13 +127,13 @@ function Footer(props) {
                 </div>
             </div>
             <div className="flex justify-between gap-3 items-center">
-                <div className="bg-white h-1 flex-grow ">
+                <div className="bg-purple-100 h-1 flex-grow ">
 
                 </div>
                 <p>
                     Copyright © 2021 shopr.com. All rights reserved
                 </p>
-                <div className="bg-white h-1 flex-grow ">
+                <div className="bg-purple-100 h-1 flex-grow ">
                 </div>
             </div>
         </div>

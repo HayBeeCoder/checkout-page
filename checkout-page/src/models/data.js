@@ -162,17 +162,17 @@ import childrenCollection from '../assets/images/landscape-male.jpg'
 export const categories = [
     {
         id: nanoid(),
-        img: menCollection,
+        img: "https://res.cloudinary.com/abasscodes/image/upload/v1647786919/shopr/homepage-collections/potrait-man_t3qqs5.jpg",
         category: "men",
     },
     {
         id: nanoid(),
-        img: womenCollection,
+        img: "https://res.cloudinary.com/abasscodes/image/upload/v1647786918/shopr/homepage-collections/collections-female_roybes.jpg",
         category: "women",
     },
     {
         id: nanoid(),
-        img: childrenCollection,
+        img: "https://res.cloudinary.com/abasscodes/image/upload/v1647786918/shopr/homepage-collections/kid_d2iiux.jpg",
         category: "children",
     },
 ]
